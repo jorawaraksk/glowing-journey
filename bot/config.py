@@ -11,7 +11,7 @@ LOGS = logging.getLogger(__name__)
 try:
     APP_ID = config("16732227", cast=int)
     API_HASH = config("8b5594ad7ad37f3a0a7ddbfb3963bb51")
-    BOT_TOKEN = config("BOT_TOKEN")
+    BOT_TOKEN = config("6613265810:AAE02TlVelL0lLMpgxkv7cY4Br4Cq6IGDZs")
     DEV = config("DEV", default=5868426717, cast=int)
     OWNER = config("OWNER" , "5868426717")
     ffmpegcode = ["-preset veryfast -c:v libx264 -b:a 64k -crf 38 -map 0 -c:s copy"]
