@@ -2,7 +2,7 @@ aiohttp
 python-decouple
 pyaesni
 psutil
-telethon
+telethon>=1.38.1
 html_telegraph_poster
 lxml[html_clean]
 lxml_html_clean
