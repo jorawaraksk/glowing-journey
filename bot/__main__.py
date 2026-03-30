@@ -7,6 +7,7 @@ from .config import *
 from .worker import *
 from .devtools import *
 from .FastTelethon import *
+from . import login # ADDED: Ensure login/logout handlers are registered
 LOGS.info("Starting...")
 
 try:
@@ -23,6 +24,15 @@ async def _(e):
         return e.reply("**Sorry You're not An Authorised User!**")
     await start(e)
 
+# ==========================================
+# ADDED: /save Command Listener
+# ==========================================
+@bot.on(events.NewMessage(pattern="/save"))
+async def _(e):
+    if str(e.sender_id) not in OWNER and e.sender_id !=DEV:
+        return await e.reply("**Sorry You're not An Authorised User!**")
+    await save_restricted(e)
+# ==========================================
 
 @bot.on(events.NewMessage(pattern="/setcode"))
 async def _(e):
